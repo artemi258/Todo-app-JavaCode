@@ -1,0 +1,13 @@
+.taskList {
+ display: flex;
+ flex-direction: column;
+ margin-top: 100px;
+}
+
+.count {
+ display: flex;
+ justify-content: end;
+ color: #f2f2f2;
+ font-size: 20px;
+ margin-bottom: 10px;
+}
