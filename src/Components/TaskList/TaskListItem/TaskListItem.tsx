@@ -1,10 +1,11 @@
 import { ITaskListItemProps } from './TaskListItem.props';
-import styles from './taskListItem.module.css';
+import { Button, Img } from '../..';
 
 import done from '../../../images/done.png';
 import notDone from '../../../images/notDone.png';
 import trash from '../../../images/trash.png';
-import { Button, Img } from '../..';
+
+import styles from './taskListItem.module.css';
 
 export const TaskListItem = ({
  id,

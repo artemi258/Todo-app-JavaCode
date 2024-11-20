@@ -1,8 +1,9 @@
 import { FormEvent, useState } from 'react';
 import { Button, Input } from '..';
 import { useAppDispatch } from '../../hooks/storeHooks';
-import styles from './form.module.css';
 import { Create } from '../TaskList/TaskListSlice';
+
+import styles from './form.module.css';
 
 export const Form = (): JSX.Element => {
  const [value, setValue] = useState<string>('');

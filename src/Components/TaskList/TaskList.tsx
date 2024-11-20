@@ -1,9 +1,9 @@
 import { useAppDispatch, useAppSelector } from '../../hooks/storeHooks';
 import { addId } from '../PopupDelete/PopupDeleteSlice';
-// import { ITaskListProps } from './TaskList.props';
-import styles from './taskList.module.css';
 import { TaskListItem } from './TaskListItem/TaskListItem';
 import { Update } from './TaskListSlice';
+
+import styles from './taskList.module.css';
 
 export const TaskList = (): JSX.Element => {
  const dispatch = useAppDispatch();

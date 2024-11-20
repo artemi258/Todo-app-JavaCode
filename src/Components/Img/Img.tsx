@@ -1,4 +1,5 @@
 import { IImgProps } from './Img.props';
+
 import styles from './img.module.css';
 
 export const Img = ({ className, src, alt, ...props }: IImgProps): JSX.Element => {

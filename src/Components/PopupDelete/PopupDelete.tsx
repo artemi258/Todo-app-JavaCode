@@ -1,7 +1,6 @@
 import { Button } from '..';
 import { useAppDispatch, useAppSelector } from '../../hooks/storeHooks';
 import { Delete } from '../TaskList/TaskListSlice';
-// import { IPopupDeleteProps } from './PopupDelete.props';
 import { closePopupDelete } from './PopupDeleteSlice';
 
 import styles from './popupDelete.module.css';
