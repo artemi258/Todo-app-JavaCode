@@ -12,7 +12,7 @@
 }
 
 .input {
- padding-right: 110px;
+ padding-right: 110px !important;
 }
 
 .button {

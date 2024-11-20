@@ -7,11 +7,11 @@ interface ITasks {
  isSuccess: boolean;
 }
 
-interface TaskListData {
+interface ITaskListData {
  tasks: ITasks[];
 }
 
-const initialState: TaskListData = {
+const initialState: ITaskListData = {
  tasks: [
   {
    id: nanoid(4),
@@ -32,17 +32,17 @@ const TaskListSlice = createSlice({
  name: 'taskList',
  initialState,
  reducers: {
-  Create: ({ tasks }, action: PayloadAction<string>) => {
+  Create: (state, action: PayloadAction<string>) => {
    const newTask: ITasks = {
     id: nanoid(4),
     text: action.payload,
     isSuccess: false,
    };
-   tasks = [...tasks, newTask];
+   state.tasks = [...state.tasks, newTask];
   },
 
-  Update: ({ tasks }, action: PayloadAction<{ id: string; isSuccess: boolean }>) => {
-   tasks = tasks.map((task) => {
+  Update: (state, action: PayloadAction<{ id: string; isSuccess: boolean }>) => {
+   state.tasks = state.tasks.map((task) => {
     if (task.id === action.payload.id) {
      return {
       id: task.id,
@@ -53,8 +53,8 @@ const TaskListSlice = createSlice({
     return task;
    });
   },
-  Delete: ({ tasks }, action: PayloadAction<string>) => {
-   tasks = tasks.filter((item) => item.id !== action.payload);
+  Delete: (state, action: PayloadAction<string>) => {
+   state.tasks = state.tasks.filter((item) => item.id !== action.payload);
   },
  },
 });

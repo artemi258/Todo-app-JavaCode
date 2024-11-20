@@ -2,7 +2,7 @@
  display: grid;
  grid-template: 1fr / 34px 1fr 34px;
  align-items: center;
- background-color: #262626;
+ background-color: var(--black);
  border-radius: 5px;
  padding: 10px;
  &:not(:last-child) {
@@ -11,7 +11,7 @@
 }
 
 .text {
- color: #f2f2f2;
+ color: var(--text);
  cursor: pointer;
 }
 

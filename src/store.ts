@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import TaskListSlice from './Components/TaskList/TaskListSlice';
+import PopupDeleteSlice from './Components/PopupDelete/PopupDeleteSlice';
 
 const store = configureStore({
- reducer: { TaskListSlice },
+ reducer: { TaskListSlice, PopupDeleteSlice },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

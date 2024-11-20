@@ -1,3 +1,4 @@
+import { PopupDelete } from './Components';
 import { Header, Main } from './PagesComponents';
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   <>
    <Header />
    <Main />
+   <PopupDelete />
   </>
  );
 }

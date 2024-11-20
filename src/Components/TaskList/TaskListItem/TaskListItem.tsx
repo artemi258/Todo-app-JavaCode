@@ -6,13 +6,23 @@ import notDone from '../../../images/notDone.png';
 import trash from '../../../images/trash.png';
 import { Button, Img } from '../..';
 
-export const TaskListItem = ({ text, isSuccess }: ITaskListItemProps): JSX.Element => {
+export const TaskListItem = ({
+ id,
+ text,
+ isSuccess,
+ changeStatus,
+ activatedPopupDelete,
+}: ITaskListItemProps): JSX.Element => {
  return (
   <li className={styles.li}>
    <div className={styles.image}>{isSuccess ? <Img src={done} /> : <Img src={notDone} />}</div>
-   <p className={`${styles.text} ${isSuccess ? styles.textDone : ''}`}>{text}</p>
+   <p
+    onClick={() => changeStatus(id, isSuccess)}
+    className={`${styles.text} ${isSuccess ? styles.textDone : ''}`}>
+    {text}
+   </p>
    <Button className={styles.button}>
-    <div className={styles.image}>
+    <div onClick={() => activatedPopupDelete(id)} className={styles.image}>
      <Img src={trash} />
     </div>
    </Button>
